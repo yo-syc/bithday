@@ -627,7 +627,8 @@
 @media (max-width: 480px) {
   .bunting {
     top: 35px;
-    padding: 2px 5px;
+    padding: 5px;
+    min-height: 30px;
   }
 }
 
@@ -635,21 +636,23 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 5px;
-  flex-wrap: nowrap;
+  gap: 8px;
+  flex-wrap: wrap;
   max-width: 100%;
-  overflow: hidden;
+  padding: 0 10px;
 }
 
 @media (max-width: 768px) {
   .bunting-string {
-    gap: 3px;
+    gap: 5px;
+    padding: 0 8px;
   }
 }
 
 @media (max-width: 480px) {
   .bunting-string {
-    gap: 2px;
+    gap: 3px;
+    padding: 0 5px;
   }
 }
 
@@ -657,32 +660,40 @@
 .bunting-flag {
   width: 0;
   height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
+  border-left: 22px solid transparent;
+  border-right: 22px solid transparent;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  font-size: 1.05rem;
+  font-weight: 800;
+  font-size: 1.15rem;
   color: white;
-  padding-top: 30px;
   animation: sway 3s ease-in-out infinite;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8), 0 0 3px rgba(0, 0, 0, 0.6);
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.4));
+  letter-spacing: 0.5px;
+}
+
+.bunting-flag::after {
+  content: attr(data-letter);
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .flag-0 {
-  border-top: 35px solid #00bcd4;
+  border-top: 38px solid #00a5bb;
 }
 
 .flag-1 {
-  border-top: 35px solid #8bc34a;
+  border-top: 38px solid #7ab73b;
   animation-delay: 0.2s;
 }
 
 .flag-2 {
-  border-top: 35px solid #ffeb3b;
+  border-top: 38px solid #ffd700;
   animation-delay: 0.4s;
 }
 
@@ -941,16 +952,20 @@
   }
 
   .bunting-flag {
-    border-left: 16px solid transparent;
-    border-right: 16px solid transparent;
-    font-size: 0.85rem;
-    padding-top: 25px;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    font-size: 0.95rem;
+    font-weight: 800;
+  }
+
+  .bunting-flag::after {
+    top: -23px;
   }
 
   .flag-0,
   .flag-1,
   .flag-2 {
-    border-top-width: 30px;
+    border-top-width: 34px;
   }
 
   .balloon-body {
@@ -1039,16 +1054,21 @@
   }
 
   .bunting-flag {
-    border-left: 12px solid transparent;
-    border-right: 12px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
     font-size: 0.65rem;
-    padding-top: 20px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+  }
+
+  .bunting-flag::after {
+    top: -14px;
   }
 
   .flag-0,
   .flag-1,
   .flag-2 {
-    border-top-width: 25px;
+    border-top-width: 22px;
   }
 
   .decorations-container {
@@ -1097,15 +1117,20 @@
   }
 
   .bunting-flag {
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
     font-size: 0.55rem;
-    padding-top: 16px;
+    font-weight: 800;
+    letter-spacing: 0.1px;
+  }
+
+  .bunting-flag::after {
+    top: -12px;
   }
 
   .flag-0,
   .flag-1,
   .flag-2 {
-    border-top-width: 20px;
+    border-top-width: 18px;
   }
 }

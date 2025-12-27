@@ -433,9 +433,11 @@ function CelebrationPage({ onComplete, musicPlayerRef }) {
                     "a",
                     "y",
                   ].map((letter, i) => (
-                    <div key={i} className={`bunting-flag flag-${i % 3}`}>
-                      {letter}
-                    </div>
+                    <div 
+                      key={i} 
+                      className={`bunting-flag flag-${i % 3}`}
+                      data-letter={letter}
+                    />
                   ))}
                 </div>
               </div>
