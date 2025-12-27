@@ -19,6 +19,13 @@
   pointer-events: all;
 }
 
+/* Hide music button when lightbox is open */
+body.lightbox-open .music-toggle {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
 .music-toggle:hover {
   background: #e91e63;
   color: white;

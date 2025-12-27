@@ -73,12 +73,15 @@ function Gallery({ isActive }) {
   useEffect(() => {
     if (lightboxOpen) {
       document.body.style.overflow = "hidden";
+      document.body.classList.add("lightbox-open");
     } else {
       document.body.style.overflow = "";
+      document.body.classList.remove("lightbox-open");
     }
 
     return () => {
       document.body.style.overflow = "";
+      document.body.classList.remove("lightbox-open");
     };
   }, [lightboxOpen]);
 
@@ -186,7 +189,7 @@ function Gallery({ isActive }) {
             onClick={closeLightbox}
             aria-label="Close lightbox"
           >
-            ✖
+            ×
           </button>
           <button
             className="nav-btn nav-prev"
